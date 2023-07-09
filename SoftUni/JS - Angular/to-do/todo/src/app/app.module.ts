@@ -6,6 +6,8 @@ import { ContainerComponent } from './container/container.component';
 import { HeaderComponent } from './header/header.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import { TodoComponent } from './todo/todo.component';
+import { PopupComponent } from './popup/popup.component';
+import { PopupBodyComponent } from './popup-body/popup-body.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { TodoComponent } from './todo/todo.component';
     ContainerComponent,
     HeaderComponent,
     TodolistComponent,
-    TodoComponent
+    TodoComponent,
+    PopupComponent,
+    PopupBodyComponent
   ],
   imports: [
     BrowserModule

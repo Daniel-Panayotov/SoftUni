@@ -1,9 +1,9 @@
 <div class="todolist">
   <h3>List of Works Todo:</h3>
-  <p class="error-info"></p>
+  <p *ngIf="errors[0]" class="error-info">{{ errors[0] }}</p>
   <ul>
-    <li *ngFor="let todo of todos">
+    <span *ngFor="let todo of todos">
       <app-todo [todo]="todo" />
-    </li>
+    </span>
   </ul>
 </div>

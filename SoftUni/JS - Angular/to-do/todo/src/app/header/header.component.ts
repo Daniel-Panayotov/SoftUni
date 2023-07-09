@@ -5,7 +5,6 @@ import { TodoService } from '../services/todo.service';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  providers: [TodoService],
 })
 export class HeaderComponent {
   constructor(private todoService: TodoService) {}

@@ -1,0 +1,17 @@
+.popup {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  color: var(--light);
+  background-color: var(--light-dark);
+  border-radius: 5px;
+}
+
+.popup h3 {
+  padding: 20px;
+}

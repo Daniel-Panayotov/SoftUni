@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Todo } from '../model/todo';
+import { TodoService } from '../services/todo.service';
 
 @Component({
   selector: 'app-todo',
@@ -7,9 +8,15 @@ import { Todo } from '../model/todo';
   styleUrls: ['./todo.component.css'],
 })
 export class TodoComponent {
-  @Input() todo: Todo | undefined = undefined;
+  @Input() todo: Todo = { name: '', isComplete: true };
 
-  constructor() {
-    console.log(this.todo);
+  constructor(private todoService: TodoService) {}
+
+  complete(): void {
+    this.todo = { name: this.todo.name, isComplete: true };
+  }
+
+  edit(): void {
+    this.todoService.update(this.todo.name);
   }
 }
