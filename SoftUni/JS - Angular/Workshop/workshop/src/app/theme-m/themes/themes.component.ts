@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../services/api/api.service';
-import { Theme } from '../types/theme';
+import { ApiService } from '../../services/api/api.service';
+import { Theme } from '../../types/theme';
 
 @Component({
   selector: 'app-themes',
@@ -15,7 +15,6 @@ export class ThemesComponent implements OnInit {
   ngOnInit(): void {
     this.api.getThemes().subscribe((themes) => {
       this.themes = themes;
-      console.log(themes);
     });
   }
 }
