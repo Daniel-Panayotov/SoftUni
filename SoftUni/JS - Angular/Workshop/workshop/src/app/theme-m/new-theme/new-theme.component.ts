@@ -9,7 +9,14 @@ import { ThemeService } from '../theme.service';
 export class NewThemeComponent {
   constructor(private themeService: ThemeService) {}
 
-  createTheme() {
-    this.themeService.createTheme();
+  createTheme(
+    e: Event,
+    themeName: HTMLInputElement,
+    postText: HTMLTextAreaElement
+  ) {
+    e.preventDefault();
+    if (themeName.value.length > 3 && postText.value.length > 3) {
+      this.themeService.createTheme(themeName.value, postText.value);
+    }
   }
 }

@@ -10,6 +10,10 @@ import { environment } from 'src/environments/environment.development';
 export class ApiService {
   constructor(private http: HttpClient) {}
 
+  getTheme(id: string) {
+    return this.http.get<Theme>(`${environment.apiUrl}/themes/${id}`);
+  }
+
   getThemes() {
     return this.http.get<Theme[]>(`${environment.apiUrl}/themes`);
   }

@@ -3,16 +3,17 @@
     <div class="header-background">
       <span>New Theme</span>
     </div>
-    <form (submit)="createTheme()">
+    <form>
       <div class="new-theme-title">
         <label for="themeName">Title <span class="red">*</span></label>
-        <input type="text" name="themeName" id="themeName" />
+        <input type="text" name="themeName" id="themeName" #themeName />
         <p class="error">Theme name is required.</p>
         <p class="error">Theme name must be at least 5 characters long.</p>
       </div>
       <div class="new-theme-content">
         <label for="postText">Post <span class="red">*</span></label>
         <textarea
+          #postText
           type="text"
           name="postText"
           id="postText"
@@ -24,7 +25,12 @@
       </div>
       <div class="new-theme-buttons">
         <button class="cancel">Cancel</button>
-        <button class="public">Post</button>
+        <button
+          class="public"
+          (click)="createTheme($event, themeName, postText)"
+        >
+          Post
+        </button>
       </div>
     </form>
   </div>

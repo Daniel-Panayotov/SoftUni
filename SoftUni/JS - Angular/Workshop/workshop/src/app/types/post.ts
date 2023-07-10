@@ -1,3 +1,5 @@
+import { userId } from './userId';
+
 interface themeId {
   created_at: string;
   posts: string[];
@@ -5,19 +7,6 @@ interface themeId {
   themeName: string;
   updatedAt: string;
   userId: string;
-  __v: number;
-  _id: string;
-}
-
-interface userId {
-  created_at: string;
-  email: string;
-  password: string;
-  posts: string[];
-  tel: string;
-  themes: string[];
-  updatedAt: string;
-  username: string;
   __v: number;
   _id: string;
 }

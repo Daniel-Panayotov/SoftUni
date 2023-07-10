@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
 import { Theme } from 'src/app/types/theme';
 
 @Component({
@@ -9,5 +10,9 @@ import { Theme } from 'src/app/types/theme';
 export class ThemeComponent {
   @Input() theme: Theme | undefined = undefined;
 
-  constructor() {}
+  constructor(private auth: AuthService) {}
+
+  get isSubscribed(): boolean {
+    return this.theme?.subscribers.includes(' ') || false;
+  }
 }

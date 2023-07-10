@@ -159,6 +159,7 @@
   width: 100%;
   /* display: flex; */
   margin-top: 1em;
+  margin-bottom: 70px;
 }
 
 .answer-comment p {
@@ -198,4 +199,9 @@
 
 .comment-area {
   min-width: 100%;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
 }

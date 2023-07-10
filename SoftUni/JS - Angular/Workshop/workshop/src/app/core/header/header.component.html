@@ -6,7 +6,7 @@
     <div class="mini-navbar">
       <ul *ngIf="user">
         <li>
-          <a routerLink="user/profile">{{ user.username }}'s profile</a>
+          <a routerLink="users/profile">{{ user.username }}'s profile</a>
         </li>
         <li (click)="logout()">
           <a>Logout</a>

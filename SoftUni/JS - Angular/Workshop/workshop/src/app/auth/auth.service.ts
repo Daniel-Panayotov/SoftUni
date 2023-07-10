@@ -1,4 +1,4 @@
-import { Injectable, NgZone, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { User } from '../types/user';
 import { environment } from 'src/environments/environment.development';
 import { Router } from '@angular/router';
